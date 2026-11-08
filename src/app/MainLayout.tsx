@@ -11,11 +11,11 @@ export default function MainLayout() {
 
       <Header />
 
+      {navigation.state === 'loading' && <Loader />}
+
       <main>
         <Outlet />
       </main>
-
-       {navigation.state === 'loading' && <Loader />}
 
       <Footer />
 

@@ -47,3 +47,17 @@ export const navLinks = [
   { to: '/#menu', label: 'Меню' },
   { to: '/#contacts', label: 'Контакты' },
 ]
+
+export const coffeeImage = 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=80'
+
+export const products = [
+    "Классический кофе",
+    "Авторские напитки",
+    "Свежая выпечка"
+];
+
+export const contacts = [
+  "ул. Кофейная, 15",
+  "Ежедневно: 08:00 – 22:00",
+  "+7 (999) 123-45-67"
+]

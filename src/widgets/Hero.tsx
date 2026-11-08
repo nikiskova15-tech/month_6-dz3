@@ -1,4 +1,5 @@
 import Button from '../shared/Button'
+import { coffeeImage } from '../shared/db'
 
 function Hero() {
   const scrollToSection = (id: string) => {
@@ -33,7 +34,7 @@ function Hero() {
 
           <div className="relative mt-8 w-full max-w-md">
             <img
-              src=""
+              src={coffeeImage}
               alt="Кофе в уютной кофейне"
               className="h-64 w-full rounded-3xl object-cover shadow-lg"
             />
@@ -70,7 +71,7 @@ function Hero() {
 
           <div className="relative w-full max-w-lg">
             <img
-              src=""
+              src={coffeeImage}
               alt="Кофе в уютной кофейне"
               className="h-96 w-full rounded-3xl object-cover shadow-lg"
             />
