@@ -1,10 +1,12 @@
-import type { ButtonProps } from "./types"
+import { cn } from './cn'
+import type { ButtonProps } from './types'
 
 export default function Button({
   variant = 'primary',
   size = 'md',
-  className = '',
+  className,
   children,
+  onClick,
 }: ButtonProps) {
   const variantClasses = {
     primary: 'bg-amber-800 text-white hover:bg-amber-900',
@@ -19,7 +21,13 @@ export default function Button({
 
   return (
     <button
-      className={`rounded-lg font-medium transition-colors ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      onClick={onClick}
+      className={cn(
+        'rounded-lg font-medium transition-colors',
+        variantClasses[variant],
+        sizeClasses[size],
+        className
+      )}
     >
       {children}
     </button>

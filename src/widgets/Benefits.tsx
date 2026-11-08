@@ -1,22 +1,21 @@
-import { benefits } from "../shared/db"
+import { benefits } from '../shared/db'
 
 function Benefits() {
   return (
-    <section className="bg-amber-50 px-4 py-12">
+    <section className="bg-amber-50 px-4 py-12 lg:py-20">
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-8 text-center text-3xl font-bold text-amber-950">
-          Почему к нам приходят
+        <h2 className="text-center text-3xl font-bold text-amber-950">
+          Почему выбирают нас
         </h2>
 
-        <div className="flex flex-wrap gap-5">
+        {/* Сетка на Flex: 1 колонка -> 2 на md (768px) -> 3 на lg (1024px) */}
+        <div className="mt-10 flex flex-wrap gap-6">
           {benefits.map((benefit) => (
             <article
               key={benefit.title}
-              className="w-full rounded-2xl bg-white p-6 shadow-sm sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
+              className="w-full rounded-2xl border border-amber-100 bg-white p-6 shadow-sm md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
             >
-              <div className="text-4xl" aria-hidden="true">
-                {benefit.icon}
-              </div>
+              <span className="text-4xl">{benefit.icon}</span>
 
               <h3 className="mt-4 text-xl font-semibold text-amber-950">
                 {benefit.title}
